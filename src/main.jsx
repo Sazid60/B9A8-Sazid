@@ -10,6 +10,8 @@ import Home from './Pages/Home.jsx';
 import ListedBooks from './Pages/ListedBooks.jsx';
 import PagesToRead from './Pages/PagesToRead.jsx';
 import BookDetails from './Pages/BookDetails.jsx';
+import MarkedReadBooks from './Components/MarkedReadBooks/MarkedReadBooks.jsx';
+import Wishlist from './Components/Wishlist/Wishlist.jsx';
 
 
 const router = createBrowserRouter([
@@ -25,6 +27,16 @@ const router = createBrowserRouter([
       {
         path: "/listed-books",
         element: <ListedBooks />,
+        children : [
+          {
+            index: true,
+            element: <MarkedReadBooks />,
+          },
+          {
+            path: "wishlist",
+            element: <Wishlist />,
+          }
+        ]
       },
       {
         path: "/pages-to-read",

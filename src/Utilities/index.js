@@ -27,16 +27,22 @@ export const saveWishList = (singleBook) => {
     const bookExists = readBooks.find(readBook => singleBook.bookId === readBook.bookId);
 
     if (isExist && !bookExists ) {
-        return toast.error('Already Added To Wish List')
+        return toast.error('Already Added To Wish List',{
+            duration: 4000,
+            position: 'top-right',})
     }
     else if (bookExists) {
-            return toast.error('You Have Already Read')
+            return toast.error('You Have Already Read',{
+                duration: 4000,
+                position: 'top-right',})
     }
     else {
         books.push(singleBook)
         localStorage.setItem('markedWish', JSON.stringify(books))
         if (!isExist && !bookExists) {
-            toast.success('Added To wish List')
+            toast.success('Added To wish List',{
+                duration: 4000,
+                position: 'top-right',})
         }
     }
 
