@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
+        loader : ()=> fetch('/books.json'),
       },
       {
         path: "/listed-books",
@@ -30,8 +31,9 @@ const router = createBrowserRouter([
         element: <PagesToRead/>,
       },
       {
-        path: "/book-details",
+        path: "/book-details/:bookId",
         element: <BookDetails/>,
+        loader : ()=> fetch('/books.json'),
       },
     ]
   },

@@ -27,7 +27,7 @@
     },
     {
       "bookId": 3,
-      "bookName": "1984",
+      "bookName": "1984 -George Orwell",
       "author": "George Orwell",
       "image": "https://i.ibb.co/mFYPmdJ/George-Orwell.jpg",
       "review": "A dystopian masterpiece that explores the dangers of totalitarianism and the erosion of individual freedom.",
@@ -92,7 +92,7 @@
       },
       {
         "bookId": 8,
-        "bookName": "Harry Potter and the Philosopher's Stone",
+        "bookName": "Harry Potter",
         "author": "J.K. Rowling",
         "image": "https://i.ibb.co/zxR99J8/Harry-Potter-and-the-Philosopher-s-Stone.jpg",
         "review": "The first book in the beloved Harry Potter series, introducing readers to the magical world of Hogwarts School of Witchcraft and Wizardry and the young wizard Harry Potter.",
@@ -131,7 +131,7 @@
       },
       {
         "bookId": 11,
-        "bookName": "The Girl with the Dragon Tattoo",
+        "bookName": "The Girl with the Tattoo",
         "author": "Stieg Larsson",
         "image": "https://i.ibb.co/7SPQK1Z/The-Girl-with-the-Dragon-Tattoo.jpg",
         "review": "A gripping mystery that follows journalist Mikael Blomkvist and hacker Lisbeth Salander as they investigate a decades-old disappearance, uncovering dark secrets along the way.",

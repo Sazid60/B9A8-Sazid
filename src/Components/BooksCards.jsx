@@ -1,10 +1,9 @@
-import UseJsonData from "../Hooks/UseJsonData";
+
 import Book from "../Components/Book";
-
+import { useLoaderData } from "react-router-dom";
 const BooksCards = () => {
-    const { booksData } = UseJsonData();
-    // console.log(booksData )
-
+    const booksData = useLoaderData();
+    // console.log(booksData)
     return (
         <section className=" text-black">
             <h1 className="font-bold text-5xl text-center mb-5 mt-5">Books</h1>

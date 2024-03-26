@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import { CiStar } from "react-icons/ci";
 
 
+// eslint-disable-next-line react/prop-types
 const Book = ({ book }) => {
-    console.log(book)
+    // console.log(book)
     const { bookId, bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = book
     return (
-        <Link to={"/book-details"} className="max-w-sm mx-auto group hover:no-underline focus:no-underline border-2 p-2 hover:scale-105 rounded-lg flex flex-col hover:shadow-2xl ">
+        <Link to={`/book-details/${bookId}`} className="max-w-sm mx-auto group hover:no-underline focus:no-underline border-2 p-2 hover:scale-105 rounded-lg flex flex-col hover:shadow-2xl ">
             <div className="flex justify-center items-center mt-4 p-3 rounded-xl w-[320px]">
                 <img role="presentation" className="w-[200px] h-[300px] rounded bg-gray-500 shadow-2xl" src={image} />
             </div>
@@ -18,11 +19,11 @@ const Book = ({ book }) => {
                     }
                 </div>
                 <div className="">
-                    <div className="h-24">
+                    <div className="h-[60px]">
                         <h3 className="text-2xl font-semibold mt-4">{bookName}</h3>
                     </div>
                     <div className="">
-                        <p className="">By : <span className="font-semibold">{publisher}</span></p>
+                        <p className="">By : <span className="font-semibold">{author}</span></p>
                     </div>
                 </div>
             </div><hr className="border border-dashed border-gray-400" />
