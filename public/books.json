@@ -21,7 +21,7 @@
       "totalPages": 281,
       "rating": 4.5,
       "category": "Fiction",
-      "tags": ["Classic", "Coming of Age", "Southern Gothic"],
+      "tags": ["Classic", "Southern Gothic"],
       "publisher": "J.B. Lippincott & Co.",
       "yearOfPublishing": 1960
     },
@@ -34,7 +34,7 @@
       "totalPages": 328,
       "rating": 4.7,
       "category": "Fiction",
-      "tags": ["Dystopian", "Political", "Social Criticism"],
+      "tags": ["Dystopian", "Political"],
       "publisher": "Secker & Warburg",
       "yearOfPublishing": 1949
     },
@@ -47,7 +47,7 @@
       "totalPages": 180,
       "rating": 4.4,
       "category": "Fiction",
-      "tags": ["Classic", "Romance", "Jazz Age"],
+      "tags": ["Classic", "Romance"],
       "publisher": "Charles Scribner's Sons",
       "yearOfPublishing": 1925
     },
@@ -60,7 +60,7 @@
       "totalPages": 279,
       "rating": 4.6,
       "category": "Fiction",
-      "tags": ["Romance", "Satire", "Regency Era"],
+      "tags": ["Romance", "Satire"],
       "publisher": "T. Egerton, Whitehall",
       "yearOfPublishing": 1813
     },
@@ -73,7 +73,7 @@
       "totalPages": 310,
       "rating": 4.8,
       "category": "Fantasy",
-      "tags": ["Adventure", "Epic", "Middle-earth"],
+      "tags": ["Adventure","Middle-earth"],
       "publisher": "Allen & Unwin",
       "yearOfPublishing": 1937
     },
@@ -86,7 +86,7 @@
         "totalPages": 1178,
         "rating": 4.9,
         "category": "Fantasy",
-        "tags": ["Epic", "Adventure", "Middle-earth"],
+        "tags": ["Adventure", "Middle-earth"],
         "publisher": "Allen & Unwin",
         "yearOfPublishing": 1954
       },
@@ -99,7 +99,7 @@
         "totalPages": 309,
         "rating": 4.7,
         "category": "Fantasy",
-        "tags": ["Magic", "Adventure", "Wizardry"],
+        "tags": ["Adventure", "Wizardry"],
         "publisher": "Bloomsbury",
         "yearOfPublishing": 1997
       },
@@ -112,7 +112,7 @@
         "totalPages": 374,
         "rating": 4.4,
         "category": "Young Adult",
-        "tags": ["Dystopian", "Survival", "Adventure"],
+        "tags": ["Dystopian", "Survival"],
         "publisher": "Scholastic Press",
         "yearOfPublishing": 2008
       },
@@ -125,7 +125,7 @@
         "totalPages": 489,
         "rating": 4.1,
         "category": "Thriller",
-        "tags": ["Mystery", "Conspiracy", "Art"],
+        "tags": ["Mystery", "Art"],
         "publisher": "Doubleday",
         "yearOfPublishing": 2003
       },
@@ -138,7 +138,7 @@
         "totalPages": 672,
         "rating": 4.2,
         "category": "Mystery",
-        "tags": ["Crime", "Scandinavian", "Suspense"],
+        "tags": ["Scandinavian", "Suspense"],
         "publisher": "Norstedts Förlag",
         "yearOfPublishing": 2005
       },
@@ -151,7 +151,7 @@
         "totalPages": 197,
         "rating": 4.3,
         "category": "Fiction",
-        "tags": ["Philosophical", "Adventure", "Spirituality"],
+        "tags": ["Philosophical", "Spirituality"],
         "publisher": "HarperCollins",
         "yearOfPublishing": 1988
       }
