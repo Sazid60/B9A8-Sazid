@@ -1,24 +1,40 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
+import { Toaster } from "react-hot-toast";
+import { saveWishList } from "../Utilities";
+import { saveReadList } from "../Utilities/index2";
+
+
 const BookDetails = () => {
     const [singleBook, setSingleBook] = useState({})
+    const [loading, setLoading] = useState(true)
     const books = useLoaderData()
     const { bookId } = useParams()
-    // console.log(bookId)
-    // console.log(books)
+
+    const handleMarkedWish = () => {
+        saveWishList(singleBook)
+    }
+    const handleMarkedRead = () => {
+        saveReadList(singleBook)
+    }
 
     useEffect(() => {
         if (books && bookId) {
+            setLoading(true);
             const singleBookObj = books.find(book => book.bookId === +bookId);
-            setSingleBook(singleBookObj)
+            setSingleBook(singleBookObj);
+            setLoading(false)
         }
     }, [books, bookId])
 
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = singleBook;
 
-    console.log(tags)
-    
+    if (loading) {
+        return
+    }
+    // console.log(tags)
+
     return (
         <div className="mt-14">
             <div className="flex flex-col lg:flex-row lg:gap-12">
@@ -34,10 +50,11 @@ const BookDetails = () => {
                     <p className="py-6"><span className="font-bold">Review :</span> {review}</p>
 
                     <div className="flex items-center gap-2">
-                        <p className="font-bold">Tags:{
+                        <p className="font-bold">Tags: </p>
+                        {
                             tags ? tags.map(tag => <p key={tag} className="btn bg-[#23BE0A0D] border-0 text-[#23BE0A] rounded-xl">{tag}</p>) : ""
-                        }</p>
-                   
+                        }
+
                     </div> <hr className="border border-dashed border-gray-400 mt-6" />
 
                     <div className="mt-6 mb-6 flex lg:gap-10">
@@ -55,11 +72,18 @@ const BookDetails = () => {
                         </div>
                     </div>
                     <div className="flex gap-2 ">
-                        <a className="btn bg-[#23BE0A] text-white">Read</a>
-                        <a className="btn bg-[#59C6D2] text-white">Wishlist</a>
+                        <button
+                            onClick={() => handleMarkedRead()}
+                            className="btn bg-[#23BE0A] text-white"
+                        >Read</button>
+                        <button
+                            onClick={() => handleMarkedWish(singleBook)}
+                            className="btn bg-[#59C6D2] text-white"
+                        >Wishlist</button>
                     </div>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };
