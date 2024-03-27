@@ -20,8 +20,9 @@ const ListedBooks = () => {
                 <details className="dropdown">
                     <summary className="btn bg-[#23BE0A] text-white mt-8">Sort By <span> <IoIosArrowDown /></span> </summary>
                     <ul className="p-2 menu z-[1] flex justify-center items-center bg-base-100 rounded-box w-full border-2 mt-2">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a>Sort By Pages</a></li>
+                        <li><a>Sort By Rating</a></li>
+                        <li><a>Sort By Category</a></li>
                     </ul>
                 </details>
             </div>

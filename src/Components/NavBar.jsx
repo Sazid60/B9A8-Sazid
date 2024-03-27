@@ -12,6 +12,10 @@ const NavBar = () => {
                         <NavLink to={"/"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'} >Home</NavLink>
                         <NavLink to={"/listed-books"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Listed Books</NavLink>
                         <NavLink to={"/pages-to-read"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Pages To Read</NavLink>
+
+                        <NavLink to={"/contact"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Contact Us</NavLink>
+
+                        <NavLink to={"/team"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Our Team</NavLink>
                     </div>
                 </div>
                 <NavLink to={"/"} className="btn btn-ghost text-lg lg:text-3xl font-bold">Book Vibe</NavLink>
@@ -21,6 +25,10 @@ const NavBar = () => {
                     <NavLink to={"/"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Home</NavLink>
                     <NavLink to={"/listed-books"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Listed Books</NavLink>
                     <NavLink to={"/pages-to-read"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Pages To Read</NavLink>
+  
+                    <NavLink to={"/contact"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Contact Us</NavLink>
+
+                    <NavLink to={"/team"} className={({ isActive }) => isActive ? 'btn bg-[#23BE0A] text-white' : 'btn btn-ghost bg-white border-0'}>Our Team</NavLink>
                 </div>
             </div>
             <div className="navbar-end flex gap-2 ">
