@@ -10,28 +10,28 @@ const MarkedReadBooks = ({ readItem }) => {
             <div className="flex justify-center rounded-xl lg:w-[400px]">
                 <img role="presentation" className="w-[200px] h-[300px] rounded bg-gray-500 shadow-2xl" src={image} />
             </div>
-            <div className="w-full">
+            <div className="w-full p-6">
                 <h1 className="text-3xl text-left font-bold mb-4">{bookName}</h1>
                 <p className="text-sm lg:text-lg mb-5 font-semibold">By : {author}</p>
-                <div>
+                <div className="">
                     <div className="flex  gap-4 mb-4 text-sm lg:text-lg flex-col lg:flex-row ">
                         
-                        <div className="flex items-center">
+                        <div className="flex items-center gap-2">
                         <span className="font-semibold mr-2">Tag</span>
                             {
-                                tags ? tags.map(tag => <p key={tag} className="btn bg-[#23BE0A0D] border-0 text-[#23BE0A] rounded-xl">{tag}</p>) : ""
+                                tags ? tags.map(tag => <p key={tag} className="btn bg-[#23BE0A0D] border-0 text-[#23BE0A] rounded-xl text-xs lg:text-lg">{tag}</p>) : ""
                             }
                         </div>
                         <p className="flex items-center gap-2"> <CiLocationOn /> <span>Year of Publishing: {yearOfPublishing}</span></p>
                     </div>
-                    <div className="flex items-center gap-5 lg:text-lg mb-4">
-                        <p className="flex items-center gap-2"> <GoPeople /> <span>Publisher : {publisher}</span></p>
-                        <p className="flex items-center gap-2"> <GoBook /> <span>Page : {totalPages}</span></p>
+                    <div className="flex items-center gap-2 lg:gap-5 lg:text-lg mb-4">
+                        <p className="flex items-center gap-2"> <GoPeople /> <span className="text-xs lg:text-lg">Publisher : {publisher}</span></p>
+                        <p className="flex items-center gap-2"> <GoBook /> <span className="text-xs lg:text-lg">Page : {totalPages}</span></p>
                     </div> <hr className="border border-dashed border-gray-400 mb-4" />
-                    <div className="flex items-center lg:gap-4 lg:text-lg">
-                        <p className="btn bg-[#328EFF26] text-[#328EFF] rounded-full">Category: {category}</p>
-                        <p className=" btn bg-[#FFAC3326] text-[#FFAC33] rounded-full">Rating: {rating}</p>
-                        <Link to={`/book-details/${bookId}`} className="btn text-white rounded-full bg-[#23BE0A]">View Details</Link>
+                    <div className="flex items-center gap-2 lg:gap-4 lg:text-lg">
+                        <p className="py-2 px-2 font-semibold bg-[#328EFF26] text-[#328EFF] rounded-full text-xs lg:text-lg">Category: {category}</p>
+                        <p className=" py-2 px-2 bg-[#FFAC3326] text-[#FFAC33] rounded-full text-xs lg:text-lg">Rating: {rating}</p>
+                        <Link to={`/book-details/${bookId}`} className="btn text-white rounded-full bg-[#23BE0A] text-xs lg:text-lg">View Details</Link>
                     </div>
 
                 </div>
