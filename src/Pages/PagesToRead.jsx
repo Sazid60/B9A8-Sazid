@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Tooltip } from 'recharts';
 import { getReadList } from '../Utilities/index2';
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
@@ -30,8 +30,8 @@ const PagesToRead = () => {
     }, []);
 
     return (
-        <div className='mt-8'>
-            <ResponsiveContainer width="100%" height={300}>
+        <div className='mt-8' style={{ width: '100%', height: '300px' }}>
+            <ResponsiveContainer width="100%" height="100%">
                 <BarChart
                     data={chartData}
                     margin={{
@@ -44,6 +44,7 @@ const PagesToRead = () => {
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
+                    <Tooltip />
                     <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
                         {chartData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />

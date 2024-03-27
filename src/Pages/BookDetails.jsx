@@ -41,7 +41,7 @@ const BookDetails = () => {
                 <div className=" w-full lg:w-[573px] lg:h-[480px] border-2 bg-slate-50 flex justify-center p-7 rounded-xl">
                     <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
                 </div>
-                <div className="p-2">
+                <div className="p-4">
                     <h1 className="text-2xl lg:text-3xl font-bold mb-2">{bookName}</h1>
                     <p className="">By : <span className="font-semibold ">{author}</span></p>
                     <hr className="border border-dashed border-gray-400 mt-2" />
