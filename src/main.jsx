@@ -14,12 +14,14 @@ import MarkedReadBooks from './Components/MarkedReadBooks/MarkedReadBooks.jsx';
 import Wishlist from './Components/Wishlist/Wishlist.jsx';
 import Contact from './Pages/Contact.jsx';
 import Team from './Pages/Team.jsx';
+import ErrorPage from './Pages/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout/>,
+    errorElement : <ErrorPage />,
     children :[
       {
         path: "/",
