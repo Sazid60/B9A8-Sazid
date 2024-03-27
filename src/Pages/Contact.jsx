@@ -9,7 +9,7 @@ const Contact = () => {
                         <div className="">Share Your Feedback With Us</div>
                     </div>
                     <div className="w-full">
-                        <img src="/public/example-scene-1.png" alt="" className="p-6" />
+                        <img src="/example-scene-1.png" alt="" className="p-6" />
                     </div>
                 </div>
                 <form noValidate="" className="space-y-3">
