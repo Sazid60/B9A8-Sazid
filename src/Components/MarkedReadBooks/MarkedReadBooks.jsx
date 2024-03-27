@@ -22,18 +22,20 @@ const MarkedReadBooks = ({ readItem }) => {
                                 tags ? tags.map(tag => <p key={tag} className="btn bg-[#23BE0A0D] border-0 text-[#23BE0A] rounded-xl text-xs lg:text-lg">{tag}</p>) : ""
                             }
                         </div>
-                        <p className="flex items-center gap-2 text-xs lg:text-lg"> <CiLocationOn /> <span>Year of Publishing: {yearOfPublishing}</span></p>
+                        <p className="flex items-center gap-2 "> <CiLocationOn /> <span className="text-xs lg:text-lg">Year of Publishing: {yearOfPublishing}</span></p>
                     </div>
                     <div className="flex flex-col lg:flex-row text-left lg:items-center gap-2 lg:gap-5 lg:text-lg mb-4">
                         <p className="flex items-center gap-2"> <GoPeople /> <span className="text-xs lg:text-lg">Publisher : {publisher}</span></p>
                         <p className="flex items-center gap-2"> <GoBook /> <span className="text-xs lg:text-lg">Page : {totalPages}</span></p>
                     </div> <hr className="border border-dashed border-gray-400 mb-4" />
-                    <div className="flex items-center gap-2 lg:gap-4 lg:text-lg">
-                        <div  className="flex items-center gap-2">
-                        <p className="py-2 px-2  bg-[#328EFF26] text-[#328EFF] rounded-full text-xs lg:text-lg">Category: {category}</p>
-                        <p className=" py-2 px-2 bg-[#FFAC3326] text-[#FFAC33] rounded-full text-xs lg:text-lg">Rating: {rating}</p>
+                    <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-4 lg:text-lg">
+                        <div className="flex items-center gap-2">
+                            <p className="py-2 px-2  bg-[#328EFF26] text-[#328EFF] rounded-full text-xs lg:text-lg">Category: {category}</p>
+                            <p className=" py-2 px-2 bg-[#FFAC3326] text-[#FFAC33] rounded-full text-xs lg:text-lg">Rating: {rating}</p>
                         </div>
+                        <div>
                         <Link to={`/book-details/${bookId}`} className="btn text-white rounded-full bg-[#23BE0A] text-xs lg:text-lg">View Details</Link>
+                        </div>
                     </div>
 
                 </div>
