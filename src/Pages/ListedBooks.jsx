@@ -12,54 +12,63 @@ const ListedBooks = () => {
     const readList = getReadList();
     const wishList = getWishList();
 
-    // Function to handle sorting criteria change
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+    };
+
     const handleSort = (criteria) => {
         setSortCriteria(criteria);
     };
 
-    // Function to sort books based on selected criteria
     const sortBooks = (books) => {
         if (sortCriteria === 'pages') {
-            return [...books].sort((a, b) => Number(a.totalPages) - Number(b.totalPages));
+            return [...books].sort((a, b) => parseInt(a.totalPages) - parseInt(b.totalPages));
         } else if (sortCriteria === 'rating') {
-            return [...books].sort((a, b) => Number(a.rating) - Number(b.rating));
+            return [...books].sort((a, b) => parseInt(a.rating) - parseInt(b.rating));
         } else if (sortCriteria === 'year') {
-            return [...books].sort((a, b) => Number(a.yearOfPublishing) - Number(b.yearOfPublishing));
+            return [...books].sort((a, b) => parseInt(a.yearOfPublishing) - parseInt(b.yearOfPublishing));
         } else {
             return books;
         }
     };
-
+    const handleMouseLeave = () => {
+        setIsOpen(false);
+    };
     return (
         <div className="mt-9">
             <div className="w-full bg-[#0D0D0D0D] h-24 flex justify-center items-center rounded-xl">
                 <h1 className="text-3xl font-bold">Books</h1>
             </div>
             {/* Side Bar */}
-            <div className="text-center ">
-                <details className="dropdown">
-                    <summary className="btn bg-[#23BE0A] text-white mt-8">Sort By <span> <IoIosArrowDown /></span> </summary>
-                    <ul className="p-2 menu flex justify-center items-center bg-base-100 rounded-box border-2 mt-2">
+
+
+
+            <div className="text-center">
+                <div className="dropdown dropdown-hover" onMouseLeave={handleMouseLeave}>
+                    <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white mt-8" onClick={handleToggle}>Sort By <span> <IoIosArrowDown /></span></div>
+                    <ul tabIndex={0} className={`dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 ${isOpen ? 'block' : 'hidden'}`}>
                         <li><a onClick={() => handleSort('pages')}>Sort By Pages</a></li>
                         <li><a onClick={() => handleSort('rating')}>Sort By Rating</a></li>
                         <li><a onClick={() => handleSort('year')}>Sort By Year</a></li>
                     </ul>
-                </details>
+                </div>
             </div>
 
             {/* Slider */}
             <div className="flex items-center mx-auto overflow-x-auto overflow-y-hidden sm:justify-start flex-nowrap text-black">
                 <Link to={''}
                     onClick={() => setTabIndex(0)}
-                    className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border-black border border-b-0' : 'border-b border-black'}`}>
+                    className={`flex cursor-pointer items-center  px-5 py-3 space-x-2 ${tabIndex === 0 ? 'border-[#23BE0A] border border-b-0' : 'border-b border-b-[#23BE0A]'}`}>
                     <span>Read Books</span>
                 </Link >
                 <Link to={`wishlist`}
                     onClick={() => setTabIndex(1)}
-                    className={`flex cursor-pointer items-center flex-shrink-0 px-5 py-3 space-x-2 ${tabIndex === 1 ? 'border-black border  border-b-0' : 'border-b border-black'}`}>
+                    className={`flex cursor-pointer items-center px-5 py-3 space-x-2 ${tabIndex === 1 ? 'border-[#23BE0A] border  border-b-0' : 'border-b border-[#23BE0A]'}`}>
                     <span>Wishlist Books</span>
                 </Link>
-                <div className="border-b flex-grow p-[38px] border-black mb-7">
+                <div className="border-b flex-grow p-[38px] border-[#23BE0A] mb-7">
                     <a>
 
                     </a >
