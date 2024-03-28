@@ -8,32 +8,32 @@ const Team = () => {
                 <p className="max-w-2xl text-center ">Our team thrives on excellence, innovation, and collaboration. With diverse skills and a shared vision, we tackle challenges creatively and celebrate successes together.</p>
                 <div className="flex flex-row flex-wrap-reverse justify-center">
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?0" />
-                        <p className="text-xl font-semibold leading-tight">Lisa Ahmed</p>
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="./lisa.jpg" />
+                        <p className="text-xl font-semibold leading-tight">Sadia Lisa</p>
                         <p className="">Sr. Story Writer </p>
                     </div>
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?1" />
-                        <p className="text-xl font-semibold leading-tight">Mim Mumu</p>
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="./maria.jpg" />
+                        <p className="text-xl font-semibold leading-tight">Maria Mim</p>
                         <p className="">Sr.Team Leed</p>
                     </div>
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?2" />
-                        <p className="text-xl font-semibold leading-tight">Leroy Jenkins</p>
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="/nayeem.jpg" />
+                        <p className="text-xl font-semibold leading-tight">Nayeem Rahman</p>
                         <p className="">Content Writer</p>
                     </div>
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?3" />
-                        <p className="text-xl font-semibold leading-tight">Fahim Rahman</p>
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="./fahim.jpg" />
+                        <p className="text-xl font-semibold leading-tight">Nafiur Fahim</p>
                         <p className="">Sr. Story Writer</p>
                     </div>
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?4" />
-                        <p className="text-xl font-semibold leading-tight">Ayaat Rahhman</p>
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="./ayaat.jpg" />
+                        <p className="text-xl font-semibold leading-tight">Ayaat Rahman</p>
                         <p className="">Jr. Story Writer</p>
                     </div>
                     <div className="flex flex-col justify-center m-8 text-center">
-                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="https://source.unsplash.com/100x100/?portrait?5" />
+                        <img alt="" className="self-center flex-shrink-0 w-24 h-24 mb-4 bg-center bg-cover rounded-full " src="./sazid.png" />
                         <p className="text-xl font-semibold leading-tight">Shahnawaz Sazid</p>
                         <p className="">Owner</p>
                     </div>
