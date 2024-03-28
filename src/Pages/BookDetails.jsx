@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 import { Toaster } from "react-hot-toast";
 import { saveReadList } from "../Utilities/index2";
-import { saveToWishlist } from "../Utilities";
+import { getWishlist, removeFromWishlist, saveToWishlist } from "../Utilities";
 
 
 
@@ -30,6 +30,8 @@ const BookDetails = () => {
             setLoading(false)
         }
     }, [books, bookId])
+
+
 
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = singleBook;
 
