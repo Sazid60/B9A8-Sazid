@@ -1,12 +1,14 @@
-import toast from "react-hot-toast"
+import toast from "react-hot-toast";
+import { removeFromWishlist } from "./index";
+
 
 export const getReadList = () => {
-    let readListedBooks = []
-    const storedReadListedBooks = localStorage.getItem('markedRead')
+    let readListedBooks = [];
+    const storedReadListedBooks = localStorage.getItem('markedRead');
     if (storedReadListedBooks) {
-        readListedBooks = JSON.parse(storedReadListedBooks)
+        readListedBooks = JSON.parse(storedReadListedBooks);
     }
-    return readListedBooks
+    return readListedBooks;
 }
 
 export const saveReadList = (singleBook) => {
@@ -15,18 +17,16 @@ export const saveReadList = (singleBook) => {
     if (isExist) {
         return toast.error('You Have Already Read',{
             duration: 4000,
-            position: 'top-right',})
+            position: 'top-right',
+        });
     }
 
-    books.push(singleBook)
-    localStorage.setItem('markedRead', JSON.stringify(books))
+    removeFromWishlist(singleBook.bookId);
+
+    books.push(singleBook);
+    localStorage.setItem('markedRead', JSON.stringify(books));
     toast.success('Added To Read List',{
         duration: 4000,
-        position: 'top-right',})
-
-
-
+        position: 'top-right',
+    });
 }
-
-
-

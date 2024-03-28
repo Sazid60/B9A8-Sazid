@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 import { Toaster } from "react-hot-toast";
-import { saveWishList } from "../Utilities";
 import { saveReadList } from "../Utilities/index2";
+import { saveToWishlist } from "../Utilities";
+
 
 
 const BookDetails = () => {
@@ -12,11 +13,13 @@ const BookDetails = () => {
     const books = useLoaderData()
     const { bookId } = useParams()
 
-    const handleMarkedWish = () => {
-        saveWishList(singleBook)
-    }
-    const handleMarkedRead = () => {
+
+    const handleMarkedRead = (singleBook) => {
         saveReadList(singleBook)
+    }
+
+    const handleMarkedWish = () => {
+        saveToWishlist(singleBook)
     }
 
     useEffect(() => {
@@ -73,7 +76,7 @@ const BookDetails = () => {
                     </div>
                     <div className="flex gap-2 ">
                         <button
-                            onClick={() => handleMarkedRead()}
+                            onClick={() => handleMarkedRead(singleBook)}
                             className="btn bg-[#23BE0A] text-white"
                         >Read</button>
                         <button

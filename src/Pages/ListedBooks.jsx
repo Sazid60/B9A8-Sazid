@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import MarkedReadBooks from "../Components/MarkedReadBooks/MarkedReadBooks";
 import Wishlist from "../Components/Wishlist/Wishlist";
 import { getReadList } from "../Utilities/index2";
-import { getWishList } from "../Utilities";
+import { getWishlist } from "../Utilities";
+
 
 const ListedBooks = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const [sortCriteria, setSortCriteria] = useState(null);
     const readList = getReadList();
-    const wishList = getWishList();
+    const wishList = getWishlist();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -42,9 +43,6 @@ const ListedBooks = () => {
                 <h1 className="text-3xl font-bold">Books</h1>
             </div>
             {/* Side Bar */}
-
-
-
             <div className="text-center">
                 <div className="dropdown dropdown-hover" onMouseLeave={handleMouseLeave}>
                     <div tabIndex={0} role="button" className="btn m-1 bg-[#23BE0A] text-white mt-8" onClick={handleToggle}>Sort By <span> <IoIosArrowDown /></span></div>
