@@ -26,7 +26,7 @@ const ListedBooks = () => {
         if (sortCriteria === 'pages') {
             return [...books].sort((a, b) => parseInt(a.totalPages) - parseInt(b.totalPages));
         } else if (sortCriteria === 'rating') {
-            return [...books].sort((a, b) => parseInt(a.rating) - parseInt(b.rating));
+            return [...books].sort((a, b) => parseFloat(a.rating) - parseFloat(b.rating));
         } else if (sortCriteria === 'year') {
             return [...books].sort((a, b) => parseInt(a.yearOfPublishing) - parseInt(b.yearOfPublishing));
         } else {
