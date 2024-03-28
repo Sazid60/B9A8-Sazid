@@ -2,7 +2,7 @@
 
 Welcome to Books Vibe - Your one-stop destination for all Books!
 
-*Live Site URL:* [https://book-vibe-b9a8-sazid.netlify.app](#)
+Live Site: [https://book-vibe-b9a8-sazid.netlify.app](https://book-vibe-b9a8-sazid.netlify.app)
 
 ## Features and Characteristics
 
